@@ -1,4 +1,4 @@
-# NLP-ASS-HCMUT-2024
+## 1. NLP-ASS-HCMUT-2024
 Bài tập lớn môn Xử lí ngôn ngữ tự nhiên (CO3085) trường Đại học Bách Khoa TPHCM
 Dự án này là một hệ thống trả lời thông tin về các chuyến du lịch sử dụng các kỹ thuật xử lý ngôn ngữ tự nhiên (NLP).
 
@@ -6,6 +6,10 @@ Dự án này là một hệ thống trả lời thông tin về các chuyến d
 
 Với truy vấn đã được chuyển thành dạng ngữ nghĩa thủ tục, hệ thống sẽ tra cứu thông tin trong cơ sở dữ liệu và trả về kết quả dựa trên câu hỏi đầu vào.
 
-# Prerequisites:
+# 2. Prerequisites:
 - Python 3.8
 - NLTK 3.9
+
+## 3. System structure
+- main.py: mã nguồn chình
+- grammar.fcfg: văn phạm cho bài toán  
