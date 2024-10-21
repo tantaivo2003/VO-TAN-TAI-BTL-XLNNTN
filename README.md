@@ -6,10 +6,31 @@ Dự án này là một hệ thống trả lời thông tin về các chuyến d
 
 Với truy vấn đã được chuyển thành dạng ngữ nghĩa thủ tục, hệ thống sẽ tra cứu thông tin trong cơ sở dữ liệu và trả về kết quả dựa trên câu hỏi đầu vào.
 
-# 2. Prerequisites:
+## 2. Prerequisites:
 - Python 3.8
 - NLTK 3.9
 
 ## 3. System structure
-- main.py: mã nguồn chình
-- grammar.fcfg: văn phạm cho bài toán  
+- main.py: mã nguồn chính
+- grammar.fcfg: văn phạm cho bài toán
+- Dockerfile: chứa những thứ cần thiết để build và chạy image
+- ./nlp/input/sentences.txt: input cho việc sinh câu
+- ./nlp/output: folder chưa output
+
+## 4. Cài đặt:
+**Có 2 cách để chạy chương trình:**
+Chạy trên máy host, kết quả được lưu trong ./nlp/output
+```sh
+$python3 main.py
+```
+Chạy thông qua Docker, kết quả được mount ra thư mục trong máy host:
+```sh
+docker build --network=host -t nlp241 .
+docker run --rm -v output:/nlp/output -v input:/nlp/input nlp222
+```
+
+## 5. Kết quả:
+- Phần 2.1: Viết văn phạm: file grammar.fcfg 
+- Phần 2.2: giải thuật sinh những câu được chấp nhận bởi grammar (giới hạn 10000 câu): input: none, output: ./nlp/output/samples.txt
+- Phần 2.3: Xây dựng bộ phân tích cú pháp: input: sentences.txt, output: ./nlp/output/parse_result.txt
+
