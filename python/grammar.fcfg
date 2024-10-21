@@ -1,0 +1,98 @@
+% start S
+
+# Cấu trúc câu hoàn chỉnh
+S -> NP VP
+S[SEM=<(WHQUERY(?vp(?varnp), ?qtail(?g)))>, VAR=?varvp] -> NP[SEM=?np, VAR=?varnp] VP[SEM=?vp, VAR=?varvp, GAP=?g] YNQTAIL[SEM=?qtail, VAR=?varqt]
+S[SEM=<(WHQUERY(?vp2(?s1), ?qtail(?g)))>, VAR=?varv2] -> S/?x[SEM=?s1, VAR=?vars1] VP/?x[SEM=?vp2, VAR=?varv2, GAP=?g] QTAIL[SEM=?qtail, VAR=?varqt]
+S/?x[SEM=<?vp(?varnp)>, VAR=?varvp] -> NP/?x[SEM=?np, VAR=?varnp] VP[SEM=?vp, VAR=?varvp]
+S[SEM=<(WHQUERY(?vp(?varnp), ?qhead(hm1)))>, VAR=?varvp] -> QHEAD[SEM=?qhead, VAR=?varqh] NP[SEM=?np, VAR=?varnp] VP[SEM=?vp, VAR=?varvp] QTAIL
+S[SEM=<WHQUERY(?vp(?varnp), ?qtail(?g))>, VAR=?varvp] -> NP[SEM=?np, VAR=?varnp] VP[SEM=?vp, VAR=?varvp, GAP=?g] QTAIL[SEM=?qtail, VAR=?varqt]
+S[SEM=<(WHQUERY(?vp2(?s1), ?qtail(?g)))>, VAR=?varv2] -> S/?x[SEM=?s1, VAR=?vars1] VP[SEM=?vp2, VAR=?varv2, GAP=?g] QTAIL[SEM=?qtail, VAR=?varqt]
+
+# Cụm danh từ (NP)
+NP[SEM=?n, VAR=?var, GAP = ?var] -> DET[NUM = ?num] N[SEM=?n, VAR=?var]
+NP[SEM=?n2, VAR=?v2] -> N[+TOUR] N[-TOUR, SEM=?n2, VAR=?v2]
+
+# Định lượng (DET)
+DET[NUM = pl] -> 'những' | 'một' 'số' | 'nhiều' | 'các' | 'tất' 'cả' 'các' 
+DET[NUM = sg] -> 'một' 'vài' | 'một' | 'mỗi' |
+
+# Danh từ (N)
+N[SEM=<DiaDiem>, VAR=<location>] -> 'trường' 'học' | 'công' 'ty' | 'nhà' 'hàng' | 'khách' 'sạn' | 'bệnh' 'viện'
+
+N[SEM=<'HoChiMinh'>,VAR=<HCM>] -> 'Hồ' 'Chí' 'Minh'
+N[SEM=<'NhaTrang'>,VAR=<NT>] -> 'Nha' 'Trang'
+N[SEM=<'DaNang'>,VAR=<DN>] -> 'Đà' 'Nẵng'
+N[SEM=<'PhuQuoc'>,VAR=<PQ>] -> 'Phú' 'Quốc'
+N[SEM=<'HaNoi'>, VAR=<HN>] -> 'Hà' 'Nội'
+N[SEM=<'Hue'>, VAR=<HUE>] -> 'Huế'
+N[SEM=<'DaLat'>, VAR=<DL>] -> 'Đà' 'Lạt'
+N[SEM=<'BacNinh'>, VAR=<BN>] -> 'Bắc' 'Ninh'
+N[SEM=<'HaiPhong'>, VAR=<HP>] -> 'Hải' 'Phòng'
+N[SEM=<'HaLong'>, VAR=<HL>] -> 'Hạ' 'Long'
+
+N[-TOUR] -> 'bạn'
+N[-TOUR, SEM=<'em'>, VAR=<em1>] -> 'em'
+N[-TOUR, SEM=<'anh'>, VAR=<anh1>] -> 'anh'
+N[-TOUR, SEM=<'chị'>, VAR=<chi1>] -> 'chị'
+N[-TOUR, SEM=<'thầy'>, VAR=<thay1>] -> 'thầy'
+N[-TOUR, SEM=<'cô'>, VAR=<co1>] -> 'cô'
+N[-TOUR, SEM=<'bạn'>, VAR=<ban1>] -> 'bạn'
+N[-TOUR, SEM=<'ông'>, VAR=<ong1>] -> 'ông'
+N[-TOUR, SEM=<'bà'>, VAR=<ba1>] -> 'bà'
+
+N[-TOUR, SEM=<PhuongTien>,VAR=<pt1>] -> 'phương' 'tiện'
+N[-TOUR, SEM=<PhuongTien>, VAR=<xe1>] -> 'xe' 'máy'
+N[-TOUR, SEM=<PhuongTien>, VAR=<oto1>] -> 'ô' 'tô'
+N[-TOUR, SEM=<PhuongTien>, VAR=<bus1>] -> 'xe' 'buýt'
+N[-TOUR, SEM=<PhuongTien>, VAR=<tauhoa1>] -> 'tàu' 'hỏa'
+N[-TOUR, SEM=<PhuongTien>, VAR=<maybay1>] -> 'máy' 'bay'
+N[-TOUR, SEM=<PhuongTien>, VAR=<tau1>] -> 'tàu' 'thủy'
+
+N[-TOUR, SEM=<Ngay>,VAR=<date1>] -> 'ngày' 
+N[-TOUR, SEM=<Ngay>, VAR=<thu2>] -> 'thứ' 'hai'
+N[-TOUR, SEM=<Ngay>, VAR=<thu3>] -> 'thứ' 'ba'
+N[-TOUR, SEM=<Ngay>, VAR=<ngaymai>] -> 'ngày' 'mai'
+N[-TOUR, SEM=<Ngay>, VAR=<homqua>] -> 'hôm' 'qua'
+N[-TOUR, SEM=<Thang>, VAR=<thang1>] -> 'tháng' 'một'
+N[-TOUR, SEM=<Thang>, VAR=<thang2>] -> 'tháng' 'hai'
+
+N[+TOUR, SEM=<'tour'>, VAR=<tour1>] -> 'tour'
+
+N -> 'tôi' | 'con' | 'cơm' | 'sáng' 'sớm' | 'anh' 'ấy' | 'cô' 'ấy' | 'chơi' | 'cờ' | 'bóng' 'đá' | 'Tài' | 'sách' 
+
+# Cụm động từ (VP)
+VP[SEM=<\n.?v(n, ?pp)>, VAR=?varv, GAP=?g] -> V[SEM=?v, VAR=?varv] PP[SEM=?pp, GAP=?g]
+VP[SEM=<\n.?v(n, ?varnp)>, VAR=?varv, GAP=?g] -> V[SEM=?v, VAR=?varv] NP[SEM=?np, VAR=?varnp, GAP=?g]
+VP/?x[SEM=<\n.?vp(n, ?varnp)>, VAR=?varvp, GAP=?g] -> V[SEM=?vp, VAR=?varvp] NP/?x[SEM=?np, VAR=?varnp, GAP=?g]
+NP/NP[SEM=<GAP>, VAR=<n1>, GAP=<n1>] ->
+
+# Động từ (V)
+V[-AUX, SEM=<\n p.GO(n, p)>, VAR=<go1>] -> 'đi'
+V[-AUX, SEM=<\n p.HAVE(n, p)>, VAR=<have1>] -> 'có'
+V[+AUX] -> 'có' 'thể'
+V[-AUX, SEM=<\n p.REMIND(n, p)>, VAR=<remind1>] -> 'nhắc' 'lại'
+V[-AUX, SEM=<\n p.CONSUME(n, p)>, VAR=<consume1>] -> 'hết'
+
+V -> bận| 'ăn' | 'uống' |'ngủ' | 'học' 'bài' | 'đánh' | 'đọc'| 'chơi' | 'mua' | 'bán' | 'dạy' | 'làm' | 'chạy' | 'lái' 'xe' | 'nhảy' | 'nghe' 'nhạc' | 'xem' 'phim' | 'đi' 'chơi' | 'đi' 'làm'
+V -> 'nói' | 'hỏi' | 'trả' 'lời' | 'xây' 'nhà' | 'gọi' 'điện' 'thoại' | 'tập' 'thể' 'dục'
+V -> 'thăm' 'bạn' | 'gặp' 'gỡ' | 'chuyển' 'khoản' | 'viết' 'thư' | 'đặt' 'phòng'
+V -> 'đặt' 'vé' | 'đi' 'du' 'lịch' | 'nấu' 'ăn' | 'làm' 'bài' 'tập' | 'đi' 'học'
+V -> 'tập' 'trung' | 'quản' 'lý' | 'kiểm' 'tra' | 'giải' 'quyết' | 'hỗ' 'trợ' 
+
+# Cụm giới từ (PP) và giới từ (P)
+PP[SEM=<?p(?varnp)>, GAP=?g] -> P[SEM=?p] NP[SEM=?np, VAR=?varnp, GAP=?g]
+PP[SEM=?pp] -> P NP PP[SEM=?pp]
+P -> 'từ'
+P -> 'lúc'
+P[SEM=<\x .TO_LOC(x)>] -> 'tới'
+P[SEM=<\x .BY_VEHICLE(x)>] -> 'bằng'
+
+# Cụm câu hỏi đầu câu (QHEAD) và đuôi câu hỏi (QTAIL, YNQTAIL)
+QHEAD[SEM=<\x.WH(x, HOWMANY)>, VAR=<HM>]   -> 'có' 'bao' 'nhiêu'
+YNQTAIL[SEM=<\x.WH(x, YESNO)>, VAR=<YS>]  -> 'được' 'không'
+QTAIL[SEM=<\x.WH(x, HOWLONG)>, VAR=<HL>]   -> 'bao' 'lâu'
+QTAIL -> 'vậy' 'bạn'
+
+QTAIL[SEM=<\x.WH(x, WHAT)>, VAR=<WT>]   -> 'gì' 'vậy'
+QTAIL[SEM=<\x.WH(x, HOWMANY)>, VAR=<HM>]   -> 'nào' 'nhỉ'
