@@ -26,7 +26,7 @@ $python3 main.py
 Chạy thông qua Docker, kết quả được mount ra thư mục trong máy host:
 ```sh
 docker build --network=host -t nlp241 .
-docker run --rm -v output:/nlp/output -v input:/nlp/input nlp222
+docker run --rm -v output:/nlp/output -v input:/nlp/input nlp241
 ```
 
 ## 5. Kết quả:
