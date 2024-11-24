@@ -39,5 +39,5 @@ docker run --rm -v output:/nlp/output -v input:/nlp/input nlp241
 ## 5. Kết quả:
 
 - Phần 2.1: Viết văn phạm: file grammar.fcfg
-- Phần 2.2: giải thuật sinh những câu được chấp nhận bởi grammar (giới hạn 10000 câu): input: none, output: ./nlp/output/samples.txt
-- Phần 2.3: Xây dựng bộ phân tích cú pháp: input: sentences.txt, output: ./nlp/output/parse_result.txt
+- Phần 2.2: giải thuật sinh những câu được chấp nhận bởi grammar (giới hạn 10000 câu): input: none, output: utput/samples.txt
+- Phần 2.3: Xây dựng bộ phân tích cú pháp: input: sentences.txt, output: .output/parse_result.txt

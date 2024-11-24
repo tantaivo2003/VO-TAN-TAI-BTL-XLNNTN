@@ -93,4 +93,4 @@ EXPOSE 5000
 
 WORKDIR /src/
 
-CMD ["python", "main.py"]
+CMD ["python3", "main.py"]
