@@ -1,0 +1,23 @@
+Parsed structure:
+ (S[SEM=<WHQUERY(CONSUME(GO(n3,TO_LOC(NT)),n4),WH(n4,HOWLONG))>, VAR=<consume1>]
+  (S[]/NP[SEM=<GO(n2,TO_LOC(NT))>, VAR=<go1>]
+    (NP[]/NP[GAP=<n1>, SEM=<GAP>, VAR=<n1>] )
+    (VP[GAP=?g, SEM=<\n.GO(n,TO_LOC(NT))>, VAR=<go1>]
+      (V[-AUX, SEM=<\n p.GO(n,p)>, VAR=<go1>] đi)
+      (PP[SEM=<TO_LOC(NT)>]
+        (P[] từ)
+        (NP[GAP=<HCM>, SEM=<'HoChiMinh'>, VAR=<HCM>]
+          (DET[NUM='sg'] )
+          (N[SEM=<'HoChiMinh'>, VAR=<HCM>] Hồ Chí Minh))
+        (PP[GAP=<NT>, SEM=<TO_LOC(NT)>]
+          (P[SEM=<\x.TO_LOC(x)>] tới)
+          (NP[GAP=<NT>, SEM=<'NhaTrang'>, VAR=<NT>]
+            (DET[NUM='sg'] )
+            (N[SEM=<'NhaTrang'>, VAR=<NT>] Nha Trang))))))
+  (VP[]/NP[GAP=<n2>, SEM=<\n.CONSUME(n,n2)>, VAR=<consume1>]
+    (V[-AUX, SEM=<\n p.CONSUME(n,p)>, VAR=<consume1>] hết)
+    (NP[]/NP[GAP=<n1>, SEM=<GAP>, VAR=<n1>] ))
+  (QTAIL[SEM=<\x.WH(x,HOWLONG)>, VAR=<HL>] bao lâu))
+Parsed logical form: WHQUERY(CONSUME(GO(n3 TO_LOC(NT)) n4) WH(n4 HOWLONG))
+Procedure semantics: {'whtype': 'HOWLONG', 'location': 'NT'}
+Results: Tour đi từ HCM đến NT mất 5:00 HR

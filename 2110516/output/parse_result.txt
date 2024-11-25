@@ -1,0 +1,122 @@
+(S[]
+  (NP[GAP=?var, SEM=?n, VAR=?var] (DET[NUM='sg'] ) (N[] tôi))
+  (VP[GAP=?varnp, SEM=<\n.?v(n,?varnp)>, VAR=?varv]
+    (V[] ăn)
+    (NP[GAP=?var, SEM=?n, VAR=?var] (DET[NUM='sg'] ) (N[] cơm))))
+(S[]
+  (NP[GAP=?var, SEM=?n, VAR=?var] (DET[NUM='sg'] ) (N[] anh ấy))
+  (VP[GAP=?g, SEM=<\n.?v(n,?p2(?g))>, VAR=?varv]
+    (V[] học bài)
+    (PP[GAP=?varnp, SEM=<?p(?varnp)>]
+      (P[] lúc)
+      (NP[GAP=?var, SEM=?n, VAR=?var]
+        (DET[NUM='sg'] )
+        (N[] sáng sớm)))))
+(S[]
+  (NP[GAP=?var, SEM=?n, VAR=?var] (DET[NUM='sg'] ) (N[] cô ấy))
+  (VP[GAP=?varnp, SEM=<\n.GO(n,?varnp)>, VAR=<go1>]
+    (V[-AUX, SEM=<\n p.GO(n,p)>, VAR=<go1>] đi)
+    (NP[GAP=?var, SEM=?n, VAR=?var] (DET[NUM='sg'] ) (N[] chơi))))
+(S[]
+  (NP[GAP=?var, SEM=?n, VAR=?var] (DET[NUM='sg'] ) (N[] Tài))
+  (VP[GAP=?varnp, SEM=<\n.?v(n,?varnp)>, VAR=?varv]
+    (V[] ăn)
+    (NP[GAP=?var, SEM=?n, VAR=?var] (DET[NUM='sg'] ) (N[] cơm))))
+(S[]
+  (NP[GAP=?var, SEM=?n, VAR=?var] (DET[NUM='sg'] ) (N[] Tài))
+  (VP[GAP=<NT>, SEM=<\n.GO(n,NT)>, VAR=<go1>]
+    (V[-AUX, SEM=<\n p.GO(n,p)>, VAR=<go1>] đi)
+    (NP[GAP=<NT>, SEM=<'NhaTrang'>, VAR=<NT>]
+      (DET[NUM='sg'] )
+      (N[SEM=<'NhaTrang'>, VAR=<NT>] Nha Trang))))
+(S[]
+  (NP[GAP=?var, SEM=?n, VAR=?var] (DET[NUM='sg'] ) (N[] Tài))
+  (VP[GAP=?varnp, SEM=<\n.GO(n,?varnp)>, VAR=<go1>]
+    (V[-AUX, SEM=<\n p.GO(n,p)>, VAR=<go1>] đi)
+    (NP[GAP=?var, SEM=?n, VAR=?var] (DET[NUM='sg'] ) (N[] chơi))))
+(S[]
+  (NP[GAP=<location>, SEM=<DiaDiem>, VAR=<location>]
+    (DET[NUM='pl'] tất cả các)
+    (N[SEM=<DiaDiem>, VAR=<location>] trường học))
+  (VP[GAP=?varnp, SEM=<\n.GO(n,?varnp)>, VAR=<go1>]
+    (V[-AUX, SEM=<\n p.GO(n,p)>, VAR=<go1>] đi)
+    (NP[GAP=?var, SEM=?n, VAR=?var] (DET[NUM='sg'] ) (N[] chơi))))
+()
+(S[SEM=<WHQUERY(CONSUME(GO(n3,TO_LOC(NT)),n4),WH(n4,HOWLONG))>, VAR=<consume1>]
+  (S[]/NP[SEM=<GO(n2,TO_LOC(NT))>, VAR=<go1>]
+    (NP[]/NP[GAP=<n1>, SEM=<GAP>, VAR=<n1>] )
+    (VP[GAP=?g, SEM=<\n.GO(n,TO_LOC(NT))>, VAR=<go1>]
+      (V[-AUX, SEM=<\n p.GO(n,p)>, VAR=<go1>] đi)
+      (PP[SEM=<TO_LOC(NT)>]
+        (P[] từ)
+        (NP[GAP=<HCM>, SEM=<'HoChiMinh'>, VAR=<HCM>]
+          (DET[NUM='sg'] )
+          (N[SEM=<'HoChiMinh'>, VAR=<HCM>] Hồ Chí Minh))
+        (PP[GAP=<NT>, SEM=<TO_LOC(NT)>]
+          (P[SEM=<\x.TO_LOC(x)>] tới)
+          (NP[GAP=<NT>, SEM=<'NhaTrang'>, VAR=<NT>]
+            (DET[NUM='sg'] )
+            (N[SEM=<'NhaTrang'>, VAR=<NT>] Nha Trang))))))
+  (VP[]/NP[GAP=<n2>, SEM=<\n.CONSUME(n,n2)>, VAR=<consume1>]
+    (V[-AUX, SEM=<\n p.CONSUME(n,p)>, VAR=<consume1>] hết)
+    (NP[]/NP[GAP=<n1>, SEM=<GAP>, VAR=<n1>] ))
+  (QTAIL[SEM=<\x.WH(x,HOWLONG)>, VAR=<HL>] bao lâu))
+(S[SEM=<WHQUERY(CONSUME(GO(n3,TO_LOC(DN)),n4),WH(n4,HOWLONG))>, VAR=<consume1>]
+  (S[]/NP[SEM=<GO(n2,TO_LOC(DN))>, VAR=<go1>]
+    (NP[]/NP[GAP=<n1>, SEM=<GAP>, VAR=<n1>] )
+    (VP[GAP=?g, SEM=<\n.GO(n,TO_LOC(DN))>, VAR=<go1>]
+      (V[-AUX, SEM=<\n p.GO(n,p)>, VAR=<go1>] đi)
+      (PP[SEM=<TO_LOC(DN)>]
+        (P[] từ)
+        (NP[GAP=<HCM>, SEM=<'HoChiMinh'>, VAR=<HCM>]
+          (DET[NUM='sg'] )
+          (N[SEM=<'HoChiMinh'>, VAR=<HCM>] Hồ Chí Minh))
+        (PP[GAP=<DN>, SEM=<TO_LOC(DN)>]
+          (P[SEM=<\x.TO_LOC(x)>] tới)
+          (NP[GAP=<DN>, SEM=<'DaNang'>, VAR=<DN>]
+            (DET[NUM='sg'] )
+            (N[SEM=<'DaNang'>, VAR=<DN>] Đà Nẵng))))))
+  (VP[]/NP[GAP=<n2>, SEM=<\n.CONSUME(n,n2)>, VAR=<consume1>]
+    (V[-AUX, SEM=<\n p.CONSUME(n,p)>, VAR=<consume1>] hết)
+    (NP[]/NP[GAP=<n1>, SEM=<GAP>, VAR=<n1>] ))
+  (QTAIL[SEM=<\x.WH(x,HOWLONG)>, VAR=<HL>] bao lâu))
+(S[SEM=<WHQUERY(GO(tour1,PQ),WH(hm1,HOWMANY))>, VAR=<go1>]
+  (QHEAD[SEM=<\x.WH(x,HOWMANY)>, VAR=<HM>] có bao nhiêu)
+  (NP[GAP=<tour1>, SEM=<'tour'>, VAR=<tour1>]
+    (DET[NUM='sg'] )
+    (N[SEM=<'tour'>, +TOUR, VAR=<tour1>] tour))
+  (VP[GAP=<PQ>, SEM=<\n.GO(n,PQ)>, VAR=<go1>]
+    (V[-AUX, SEM=<\n p.GO(n,p)>, VAR=<go1>] đi)
+    (NP[GAP=<PQ>, SEM=<'PhuQuoc'>, VAR=<PQ>]
+      (DET[NUM='sg'] )
+      (N[SEM=<'PhuQuoc'>, VAR=<PQ>] Phú Quốc)))
+  (QTAIL[] vậy bạn))
+(S[SEM=<WHQUERY(GO(NT,BY_VEHICLE(pt1)),WH(pt1,WHAT))>, VAR=<go1>]
+  (NP[SEM=<'NhaTrang'>, VAR=<NT>]
+    (N[SEM=<'tour'>, +TOUR, VAR=<tour1>] tour)
+    (N[SEM=<'NhaTrang'>, VAR=<NT>] Nha Trang))
+  (VP[GAP=<pt1>, SEM=<\n.GO(n,BY_VEHICLE(pt1))>, VAR=<go1>]
+    (V[-AUX, SEM=<\n p.GO(n,p)>, VAR=<go1>] đi)
+    (PP[GAP=<pt1>, SEM=<BY_VEHICLE(pt1)>]
+      (P[SEM=<\x.BY_VEHICLE(x)>] bằng)
+      (NP[GAP=<pt1>, SEM=<PhuongTien>, VAR=<pt1>]
+        (DET[NUM='sg'] )
+        (N[SEM=<PhuongTien>, -TOUR, VAR=<pt1>] phương tiện))))
+  (QTAIL[SEM=<\x.WH(x,WHAT)>, VAR=<WT>] gì vậy))
+(S[SEM=<WHQUERY(HAVE(GO(n2,NT),date1),WH(date1,HOWMANY))>, VAR=<have1>]
+  (S[]/NP[SEM=<GO(n2,NT)>, VAR=<go1>]
+    (NP[]/NP[GAP=<n1>, SEM=<GAP>, VAR=<n1>] )
+    (VP[GAP=<NT>, SEM=<\n.GO(n,NT)>, VAR=<go1>]
+      (V[-AUX, SEM=<\n p.GO(n,p)>, VAR=<go1>] đi)
+      (NP[GAP=<NT>, SEM=<'NhaTrang'>, VAR=<NT>]
+        (DET[NUM='sg'] )
+        (N[SEM=<'NhaTrang'>, VAR=<NT>] Nha Trang))))
+  (VP[GAP=<date1>, SEM=<\n.HAVE(n,date1)>, VAR=<have1>]
+    (V[-AUX, SEM=<\n p.HAVE(n,p)>, VAR=<have1>] có)
+    (NP[GAP=<date1>, SEM=<Ngay>, VAR=<date1>]
+      (DET[NUM='pl'] những)
+      (N[SEM=<Ngay>, -TOUR, VAR=<date1>] ngày)))
+  (QTAIL[SEM=<\x.WH(x,HOWMANY)>, VAR=<HM>] nào nhỉ))
+()
+()
+()

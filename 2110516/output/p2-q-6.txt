@@ -1,0 +1,20 @@
+Parsed structure:
+ (S[SEM=<WHQUERY(HAVE(GO(n2,NT),date1),WH(date1,HOWMANY))>, VAR=<have1>]
+  (S[]/NP[SEM=<GO(n2,NT)>, VAR=<go1>]
+    (NP[]/NP[GAP=<n1>, SEM=<GAP>, VAR=<n1>] )
+    (VP[GAP=<NT>, SEM=<\n.GO(n,NT)>, VAR=<go1>]
+      (V[-AUX, SEM=<\n p.GO(n,p)>, VAR=<go1>] đi)
+      (NP[GAP=<NT>, SEM=<'NhaTrang'>, VAR=<NT>]
+        (DET[NUM='sg'] )
+        (N[SEM=<'NhaTrang'>, VAR=<NT>] Nha Trang))))
+  (VP[GAP=<date1>, SEM=<\n.HAVE(n,date1)>, VAR=<have1>]
+    (V[-AUX, SEM=<\n p.HAVE(n,p)>, VAR=<have1>] có)
+    (NP[GAP=<date1>, SEM=<Ngay>, VAR=<date1>]
+      (DET[NUM='pl'] những)
+      (N[SEM=<Ngay>, -TOUR, VAR=<date1>] ngày)))
+  (QTAIL[SEM=<\x.WH(x,HOWMANY)>, VAR=<HM>] nào nhỉ))
+Parsed logical form: WHQUERY(HAVE(GO(n2 NT) date1) WH(date1 HOWMANY))
+Procedure semantics: {'whtype': 'HOWMANY', 'location': 'NT', 'object': 'date1'}
+Results: Đi NT có ngày 1/7
+Đi NT có ngày 5/7
+

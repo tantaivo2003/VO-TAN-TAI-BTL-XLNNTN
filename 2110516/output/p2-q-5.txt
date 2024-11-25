@@ -1,0 +1,17 @@
+Parsed structure:
+ (S[SEM=<WHQUERY(GO(NT,BY_VEHICLE(pt1)),WH(pt1,WHAT))>, VAR=<go1>]
+  (NP[SEM=<'NhaTrang'>, VAR=<NT>]
+    (N[SEM=<'tour'>, +TOUR, VAR=<tour1>] tour)
+    (N[SEM=<'NhaTrang'>, VAR=<NT>] Nha Trang))
+  (VP[GAP=<pt1>, SEM=<\n.GO(n,BY_VEHICLE(pt1))>, VAR=<go1>]
+    (V[-AUX, SEM=<\n p.GO(n,p)>, VAR=<go1>] đi)
+    (PP[GAP=<pt1>, SEM=<BY_VEHICLE(pt1)>]
+      (P[SEM=<\x.BY_VEHICLE(x)>] bằng)
+      (NP[GAP=<pt1>, SEM=<PhuongTien>, VAR=<pt1>]
+        (DET[NUM='sg'] )
+        (N[SEM=<PhuongTien>, -TOUR, VAR=<pt1>] phương tiện))))
+  (QTAIL[SEM=<\x.WH(x,WHAT)>, VAR=<WT>] gì vậy))
+Parsed logical form: WHQUERY(GO(NT BY_VEHICLE(pt1)) WH(pt1 WHAT))
+Procedure semantics: {'whtype': 'WHAT', 'location': 'NT', 'object': 'pt1'}
+Results: Đi NT bằng train
+

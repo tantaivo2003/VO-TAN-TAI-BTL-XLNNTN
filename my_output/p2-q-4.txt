@@ -1,0 +1,15 @@
+Parsed structure:
+ (S[SEM=<WHQUERY(GO(tour1,PQ),WH(hm1,HOWMANY))>, VAR=<go1>]
+  (QHEAD[SEM=<\x.WH(x,HOWMANY)>, VAR=<HM>] có bao nhiêu)
+  (NP[GAP=<tour1>, SEM=<'tour'>, VAR=<tour1>]
+    (DET[NUM='sg'] )
+    (N[SEM=<'tour'>, +TOUR, VAR=<tour1>] tour))
+  (VP[GAP=<PQ>, SEM=<\n.GO(n,PQ)>, VAR=<go1>]
+    (V[-AUX, SEM=<\n p.GO(n,p)>, VAR=<go1>] đi)
+    (NP[GAP=<PQ>, SEM=<'PhuQuoc'>, VAR=<PQ>]
+      (DET[NUM='sg'] )
+      (N[SEM=<'PhuQuoc'>, VAR=<PQ>] Phú Quốc)))
+  (QTAIL[] vậy bạn))
+Parsed logical form: WHQUERY(GO(tour1 PQ) WH(hm1 HOWMANY))
+Procedure semantics: {'whtype': 'HOWMANY', 'location': 'PQ', 'object': 'tour1'}
+Results: Có 2 tour đi đến PQ
