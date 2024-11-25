@@ -17,13 +17,14 @@ Với truy vấn đã được chuyển thành dạng ngữ nghĩa thủ tục, 
 - main.py: mã nguồn chính
 - grammar.fcfg: văn phạm cho bài toán
 - Dockerfile: chứa những thứ cần thiết để build và chạy image
-- ./nlp/input/sentences.txt: input cho việc sinh câu
+- .base/input/sentences.txt: input cho việc sinh câu
+- ./base/input/input_question.txt: input cho việc biễu diễn ngữ nghĩa và trả lời
 - ./nlp/output: folder chưa output
 
 ## 4. Cài đặt:
 
-**Có 2 cách để chạy chương trình:**
-Chạy trên máy host, kết quả được lưu trong ./nlp/output
+**Có 3 cách để chạy chương trình:**
+Chạy trên máy host, kết quả được lưu trong ./output
 
 ```sh
 $python3 main.py
@@ -33,11 +34,18 @@ Chạy thông qua Docker, kết quả được mount ra thư mục trong máy ho
 
 ```sh
 docker build --network=host -t nlp241 .
-docker run --rm -v output:/nlp/output -v input:/nlp/input nlp241
+ docker run --rm -it -v "${PWD}/2110516/output:/src/output" -v "${PWD}/2110516/input:/src/input" nlpfinal
+```
+
+Chạy thông qua util.sh, kết quả trên máy host
+
+```sh
+./util.sh test
 ```
 
 ## 5. Kết quả:
 
 - Phần 2.1: Viết văn phạm: file grammar.fcfg
-- Phần 2.2: giải thuật sinh những câu được chấp nhận bởi grammar (giới hạn 10000 câu): input: none, output: ./nlp/output/samples.txt
-- Phần 2.3: Xây dựng bộ phân tích cú pháp: input: sentences.txt, output: ./nlp/output/parse_result.txt
+- Phần 2.2: giải thuật sinh những câu được chấp nhận bởi grammar (giới hạn 10000 câu): input: none, output: utput/samples.txt
+- Phần 2.3: Xây dựng bộ phân tích cú pháp: input: sentences.txt, output: .output/parse_result.txt
+- Phần 3.1: Biểu diễn ngữ nghĩa và trả lời: input input_question.txt, output: output/p2-q-[i].txt
