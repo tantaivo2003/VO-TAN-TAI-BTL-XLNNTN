@@ -30,7 +30,7 @@ function run_test {
 	cur=`pwd`
 	cd $PROJ_P_LANG
 	docker build --network=host -t nlp241 .
-	docker run --rm -v $S_OUT:/nlp/output -v $S_IN:/nlp/input nlp241
+	docker run --rm -v $S_OUT:/src/output -v $S_IN:/src/input nlp241
 	cd $cur
 	echo "please check output in $S_OUT"
 }

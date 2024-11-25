@@ -1,47 +1,15 @@
-(S[]
-  (NP[GAP=?var, SEM=?n, VAR=?var] (DET[NUM='sg'] ) (N[] tôi))
-  (VP[GAP=?varnp, SEM=<\n.?v(n,?varnp)>, VAR=?varv]
-    (V[] ăn)
-    (NP[GAP=?var, SEM=?n, VAR=?var] (DET[NUM='sg'] ) (N[] cơm))))
-(S[]
-  (NP[GAP=?var, SEM=?n, VAR=?var] (DET[NUM='sg'] ) (N[] anh ấy))
-  (VP[GAP=?g, SEM=<\n.?v(n,?p2(?g))>, VAR=?varv]
-    (V[] học bài)
-    (PP[GAP=?varnp, SEM=<?p(?varnp)>]
-      (P[] lúc)
-      (NP[GAP=?var, SEM=?n, VAR=?var]
-        (DET[NUM='sg'] )
-        (N[] sáng sớm)))))
-(S[]
-  (NP[GAP=?var, SEM=?n, VAR=?var] (DET[NUM='sg'] ) (N[] cô ấy))
-  (VP[GAP=?varnp, SEM=<\n.GO(n,?varnp)>, VAR=<go1>]
-    (V[-AUX, SEM=<\n p.GO(n,p)>, VAR=<go1>] đi)
-    (NP[GAP=?var, SEM=?n, VAR=?var] (DET[NUM='sg'] ) (N[] chơi))))
-(S[]
-  (NP[GAP=?var, SEM=?n, VAR=?var] (DET[NUM='sg'] ) (N[] Tài))
-  (VP[GAP=?varnp, SEM=<\n.?v(n,?varnp)>, VAR=?varv]
-    (V[] ăn)
-    (NP[GAP=?var, SEM=?n, VAR=?var] (DET[NUM='sg'] ) (N[] cơm))))
-(S[]
-  (NP[GAP=?var, SEM=?n, VAR=?var] (DET[NUM='sg'] ) (N[] Tài))
-  (VP[GAP=<NT>, SEM=<\n.GO(n,NT)>, VAR=<go1>]
-    (V[-AUX, SEM=<\n p.GO(n,p)>, VAR=<go1>] đi)
-    (NP[GAP=<NT>, SEM=<'NhaTrang'>, VAR=<NT>]
-      (DET[NUM='sg'] )
-      (N[SEM=<'NhaTrang'>, VAR=<NT>] Nha Trang))))
-(S[]
-  (NP[GAP=?var, SEM=?n, VAR=?var] (DET[NUM='sg'] ) (N[] Tài))
-  (VP[GAP=?varnp, SEM=<\n.GO(n,?varnp)>, VAR=<go1>]
-    (V[-AUX, SEM=<\n p.GO(n,p)>, VAR=<go1>] đi)
-    (NP[GAP=?var, SEM=?n, VAR=?var] (DET[NUM='sg'] ) (N[] chơi))))
-(S[]
-  (NP[GAP=<location>, SEM=<DiaDiem>, VAR=<location>]
-    (DET[NUM='pl'] tất cả các)
-    (N[SEM=<DiaDiem>, VAR=<location>] trường học))
-  (VP[GAP=?varnp, SEM=<\n.GO(n,?varnp)>, VAR=<go1>]
-    (V[-AUX, SEM=<\n p.GO(n,p)>, VAR=<go1>] đi)
-    (NP[GAP=?var, SEM=?n, VAR=?var] (DET[NUM='sg'] ) (N[] chơi))))
-()
+(S[SEM=<WHQUERY(REMIND(em1,tour1),WH(tour1,YESNO))>, VAR=<remind1>]
+  (NP[GAP=<em1>, SEM=<'em'>, VAR=<em1>]
+    (DET[NUM='sg'] )
+    (N[SEM=<'em'>, -TOUR, VAR=<em1>] em))
+  (VP[GAP=<tour1>, SEM=<\n.REMIND(n,tour1)>, VAR=<remind1>]
+    (V[-AUX, SEM=<\n p.REMIND(n,p)>, VAR=<remind1>]
+      (V[+AUX] có thể)
+      (V[-AUX, SEM=<\n p.REMIND(n,p)>, VAR=<remind1>] nhắc lại))
+    (NP[GAP=<tour1>, SEM=<'tour'>, VAR=<tour1>]
+      (DET[NUM='pl'] tất cả các)
+      (N[SEM=<'tour'>, +TOUR, VAR=<tour1>] tour)))
+  (YNQTAIL[SEM=<\x.WH(x,YESNO)>, VAR=<YS>] được không))
 (S[SEM=<WHQUERY(CONSUME(GO(n3,TO_LOC(NT)),n4),WH(n4,HOWLONG))>, VAR=<consume1>]
   (S[]/NP[SEM=<GO(n2,TO_LOC(NT))>, VAR=<go1>]
     (NP[]/NP[GAP=<n1>, SEM=<GAP>, VAR=<n1>] )
@@ -117,6 +85,3 @@
       (DET[NUM='pl'] những)
       (N[SEM=<Ngay>, -TOUR, VAR=<date1>] ngày)))
   (QTAIL[SEM=<\x.WH(x,HOWMANY)>, VAR=<HM>] nào nhỉ))
-()
-()
-()

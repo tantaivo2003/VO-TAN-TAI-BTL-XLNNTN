@@ -65,7 +65,8 @@ N -> 'tôi' | 'con' | 'cơm' | 'sáng' 'sớm' | 'anh' 'ấy' | 'cô' 'ấy' | '
 VP[SEM=<\n.?v(n, ?pp)>, VAR=?varv, GAP=?g] -> V[SEM=?v, VAR=?varv] PP[SEM=?pp, GAP=?g]
 VP[SEM=<\n.?v(n, ?varnp)>, VAR=?varv, GAP=?g] -> V[SEM=?v, VAR=?varv] NP[SEM=?np, VAR=?varnp, GAP=?g]
 VP/?x[SEM=<\n.?vp(n, ?varnp)>, VAR=?varvp, GAP=?g] -> V[SEM=?vp, VAR=?varvp] NP/?x[SEM=?np, VAR=?varnp, GAP=?g]
-NP/NP[SEM=<GAP>, VAR=<n1>, GAP=<n1>] ->
+NP/NP[SEM=<GAP>, VAR=<n1>, GAP=<n1>] -> 
+V[-AUX, SEM=?v, VAR=?var] -> V[+AUX] V[-AUX, SEM=?v, VAR=?var]
 
 # Động từ (V)
 V[-AUX, SEM=<\n p.GO(n, p)>, VAR=<go1>] -> 'đi'

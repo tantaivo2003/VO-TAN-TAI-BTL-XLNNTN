@@ -1,0 +1,23 @@
+Parsed structure:
+ (S[SEM=<WHQUERY(REMIND(em1,tour1),WH(tour1,YESNO))>, VAR=<remind1>]
+  (NP[GAP=<em1>, SEM=<'em'>, VAR=<em1>]
+    (DET[NUM='sg'] )
+    (N[SEM=<'em'>, -TOUR, VAR=<em1>] em))
+  (VP[GAP=<tour1>, SEM=<\n.REMIND(n,tour1)>, VAR=<remind1>]
+    (V[-AUX, SEM=<\n p.REMIND(n,p)>, VAR=<remind1>]
+      (V[+AUX] có thể)
+      (V[-AUX, SEM=<\n p.REMIND(n,p)>, VAR=<remind1>] nhắc lại))
+    (NP[GAP=<tour1>, SEM=<'tour'>, VAR=<tour1>]
+      (DET[NUM='pl'] tất cả các)
+      (N[SEM=<'tour'>, +TOUR, VAR=<tour1>] tour)))
+  (YNQTAIL[SEM=<\x.WH(x,YESNO)>, VAR=<YS>] được không))
+Parsed logical form: WHQUERY(REMIND(em1 tour1) WH(tour1 YESNO))
+Procedure semantics: {'whtype': 'YESNO', 'request': 'REMIND', 'gap': 'tour1'}
+Results: Có tổng cộng 6 tour:
+Tour đi từ HCMC đến PQ khởi hành lúc "7AM 1/7"
+Tour đi từ HCMC đến PQ khởi hành lúc "8AM 5/7"
+Tour đi từ HCMC đến DN khởi hành lúc "7AM 1/7"
+Tour đi từ HCMC đến DN khởi hành lúc "7AM 4/7"
+Tour đi từ HCMC đến NT khởi hành lúc "7AM 1/7"
+Tour đi từ HCMC đến NT khởi hành lúc "7AM 5/7"
+
